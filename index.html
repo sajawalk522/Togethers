@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap"
+        rel="stylesheet">
+    <title>Together</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="heading">
+            <img src="images/together.png" />
+        </div>
+        <div class="content-container">
+            <div class="content-inner">
+                <div class="content-heading">
+                    <h3>Same day Shipping from North Carolina</h3>
+                </div>
+                <div class="container">
+                    <div class="left-container">
+                        <div>
+
+                            <div class="card-box box">
+                                <div>
+                                    <h3>2. Shipping</h3>
+                                    <form>
+                                        <label class="label">
+                                            <input type="text" name="fname" placeholder="Full Name">
+                                        </label>
+                                        <label class="label">
+                                            <input type="text" name="email" placeholder="Email">
+                                        </label>
+                                        <label class="label">
+                                            <input type="number" name="phone" placeholder="Phone">
+                                        </label>
+
+                                        <label class="label">
+                                            <input type="text" name="address" placeholder="address">
+                                        </label>
+                                        <div class="group">
+                                            <label class="label">
+                                                <input type="text" name="city" placeholder="City">
+                                            </label>
+
+                                            <select name="state">
+                                                <option value="State">State</option>
+                                                <option value="State">State</option>
+                                                <option value="State">State</option>
+                                            </select>
+
+                                            <label class="label">
+                                                <input type="number" name="zip" placeholder="ZIP" class="zip">
+                                            </label>
+                                        </div>
+                                        <label class="check-container">Billing address is same as shipping
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card-box box">
+                                <div>
+                                    <h3>3. Secure Payment</h3>
+                                    <div class="payment">
+                                        <input type="text" name="Card number" placeholder="Card Number">
+                                        <input type="text" name="expiry" placeholder="Expiry">
+                                        <input type="text" name="cvv" placeholder="CVV">
+                                    </div>
+                                    <div class="finish">
+                                        <a href="#"><img src="images/lock.png" />Finish Payment</a>
+                                    </div>
+                                    <div class="icon-container">
+                                        <img src="images/billing seals.svg" />
+                                    </div>
+                                    <div class="paypal-btn">
+                                        <a href="#"><img src="images/paypal.png"></a>
+                                    </div>
+                                    <label class="check-container bottomCheckbox">I accept the terms of the TOGETHER
+                                        Free Try-On Program.
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-box  mobile-box">
+                            <div class="order-container">
+                                <h3><img src="images/GiftIcon.png"/> Free Try-On Program</h3>
+                                <div class="order-list">
+                                    <p>Our Free Mask Try-on experience is unique. We gaurentee you will feel safer with
+                                        our KN95-Sport Mask, or your shipping is on us. After 10 days, starting on [Jan
+                                        10th] we will ship you 10 KN95-Sport Masks for a discounted rate of $19/month.
+                                       </p>
+                                       <p> Easily cancel, skip or adjust quanity by emailing our kind concierges team:
+                                        support@PrevailTogether.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-container">
+                        <div class="image-box">
+                            <div>
+                                <h3>KN95 Max-Sport Mask</h3>
+                                <div class="img-container">
+                                    <img src="images/bag.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <div class="order-container">
+                                <h3>Order Total</h3>
+                                <div class="order-list">
+                                    <p><span>Subtotal</span> <span>$95.00</span></p>
+                                    <p><span>Shipping</span> <span>$2.99</span></p>
+                                    <h1><span>Total</span> <span>$99.50</span></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-box  desktop-box">
+                            <div class="order-container">
+                                <h3><img src="images/GiftIcon.png"/> Free Try-On Program</h3>
+                                <div class="order-list">
+                                    <p>Our Free Mask Try-on experience is unique. We gaurentee you will feel safer with
+                                        our KN95-Sport Mask, or your shipping is on us. After 10 days, starting on [Jan
+                                        10th] we will ship you 10 KN95-Sport Masks for a discounted rate of $19/month.
+                                       </p>
+                                       <p> Easily cancel, skip or adjust quanity by emailing our kind concierges team:
+                                        support@PrevailTogether.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $("input:checkbox").on('click', function () {
+        var $box = $(this);
+        if ($box.is(":checked")) {
+            var group = "input:checkbox[name='" + $box.attr("name") + "']";
+            $(group).prop("checked", false);
+            $box.prop("checked", true);
+        } else {
+            $box.prop("checked", false);
+        }
+    });
+    var header = document.getElementById("checked");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace("active", "");
+            this.className += "active";
+        });
+    }
+</script>
